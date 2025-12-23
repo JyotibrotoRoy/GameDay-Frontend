@@ -120,9 +120,9 @@ export default function App() {
       </div>
 
       <div className="stats-grid">
-        <StatCard title="Total Logs Today" value={metrics?.TotalLogsToday || 0} icon={Database} color="#3b82f6" />
+        <StatCard title="Total Logs Today" value={metrics?.["Total Logs Today"] || 0} icon={Database} color="#3b82f6" />
         <StatCard title="JVM Memory Used" value={formatMB(metrics?.UsedMemory)} icon={Server} color="#8b5cf6" />
-        <StatCard title="Services with Errors" value={Object.keys(metrics?.ErrorLogs || {}).length} icon={ShieldAlert} color="#ef4444" />
+        <StatCard title="Services with Errors" value={Object.keys(metrics?.["Error Logs"] || {}).length} icon={ShieldAlert} color="#ef4444" />
       </div>
 
       <div className="content-grid">
